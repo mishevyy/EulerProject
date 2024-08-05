@@ -1,7 +1,5 @@
 ﻿// Задача 16.
-
 // 2^15 = 32768, сумма цифр этого числа равна 3 + 2 + 7 + 6 + 8 = 26.
-
 // Какова сумма цифр числа 2^1000?
 
 
@@ -24,10 +22,7 @@ while (degree > 0)
             de = tempNumber.Substring(0, tempNumber.Length - 1);
             tempNumber = tempNumber.Substring(tempNumber.Length - 1);
         }
-
-
     }
-
 
     degree--;
 }

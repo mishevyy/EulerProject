@@ -1,5 +1,7 @@
 ﻿// Задача 13.
 // Найдите первые десять цифр суммы следующих ста 50-значных чисел.
+
+
 string longlongstring =
 "37107287533902102798797998220837590246510135740250;" +
 "46376937677490009712648124896970078050417018260538;" +
@@ -111,7 +113,7 @@ while (bigNumberPosition >= 0)
 {
     for (int i = 0; i < bigNumbers.Length; i++)
     {
-        sum += (int)Char.GetNumericValue(bigNumbers[i][bigNumberPosition]);
+        sum += (int)char.GetNumericValue(bigNumbers[i][bigNumberPosition]);
     }
 
     numbers.Push(sum % 10);
@@ -125,12 +127,12 @@ while (bigNumberPosition >= 0)
 string sumString = sum.ToString();
 for (int k = sumString.Length - 1; k >= 0; k--)
 {
-    numbers.Push((int)Char.GetNumericValue(sumString[k]));
+    numbers.Push((int)char.GetNumericValue(sumString[k]));
 }
 
 while (numbers.Count != 0)
 {
-    Console.Write($"Первые десять цифр суммы следующих ста 50-значных чисел равна {numbers.Pop()}");
+    Console.Write($"Первые десять цифр суммы следующих ста 50-значных чисел равна { numbers.Pop() }");
 }
 
 // 5537376230390876637302048746832985971773659831892672

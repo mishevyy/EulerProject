@@ -1,16 +1,13 @@
 ﻿// Задача 17.
-
 // Если записать числа от 1 до 5 английскими словами (one, two, three, four, five), то используется всего 3 + 3 + 5 + 4 + 4 = 19 букв.
 // Сколько букв понадобится для записи всех чисел от 1 до 1000 (one thousand) включительно?
-
 // Примечание: Не считайте пробелы и дефисы. Например, число 342 (three hundred and forty-two) состоит из 23 букв,
 // число 115 (one hundred and fifteen) -из 20 букв.
 // Использование "and" при записи чисел соответствует правилам британского английского.
 
-using System.IO;
 
-Dictionary<int, string> numbers = new Dictionary<int, string>();
-numbers.Add(0, String.Empty);
+var numbers = new Dictionary<int, string>();
+numbers.Add(0, string.Empty);
 numbers.Add(1, "one");
 numbers.Add(2, "two");
 numbers.Add(3, "three");
@@ -47,14 +44,9 @@ Console.WriteLine(GetLengthNumber(342));
 string longString = string.Empty;
 for (int i = 1; i <= 1000; i++)
 {
-
     // 342 mod 10 = 2 => 342 - 2 = 340
     // 340 mod 100 = 40 => 340 - 40 = 300
     // 300 mod 1000 = 0
-
-
-
-
 
     if (i >= 1000)
     {
